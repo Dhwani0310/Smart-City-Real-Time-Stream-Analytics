@@ -1,0 +1,19 @@
+{
+  "student_id": "202126940028",
+  "topic_name": "202126940028_sensor_events",
+  "partitions": 2,
+  "temperature_threshold": 40.0,
+  "sensor_thresholds": {
+    "E10_SENSOR_A": 42.0,
+    "E10_SENSOR_B": 38.0,
+    "E10_SENSOR_C": 45.0
+  },
+  "watermark_delay": "10 minutes",
+  "consecutive_rule": 5,
+  "breaches_needed": 3,
+  "weights": {
+    "anomaly_pct": 0.4,
+    "temp_excess": 0.3,
+    "critical_alerts": 0.3
+  }
+}

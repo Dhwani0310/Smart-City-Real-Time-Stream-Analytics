@@ -1,0 +1,56 @@
+
+Configuration File Notes
+========================
+
+The project configuration is stored in student_config.json.
+
+JSON does not support comments directly. This file explains the
+purpose of each configuration field.
+
+student_id:
+The unique student identifier used to mark project events.
+Current value: 202126940028.
+
+topic_name:
+The Kafka topic used to publish and consume sensor events.
+Current value: 202126940028_sensor_events.
+
+partitions:
+The number of partitions configured for the Kafka topic.
+Current value: 2. The assignment requires at least 2 partitions.
+
+temperature_threshold:
+The global temperature threshold in degrees Celsius.
+Current value: 40.0 C. Readings above this value are treated
+as abnormal by the main producer and the global-threshold
+risk-ranking calculation.
+
+sensor_thresholds:
+Personalized temperature thresholds used by the Task 5
+anomaly detector and the personalized demonstration test.
+
+E10_SENSOR_A: 42.0 C
+E10_SENSOR_B: 38.0 C
+E10_SENSOR_C: 45.0 C
+
+watermark_delay:
+The event-time watermark delay used for late-event handling.
+Current value: 10 minutes.
+
+consecutive_rule:
+The number of recent sensor readings considered by the
+stateful anomaly detector. Current value: 5.
+
+breaches_needed:
+The minimum number of readings above the applicable sensor
+threshold required to generate a critical alert.
+Current value: 3.
+
+weights:
+The risk-ranking weights used in Task 6.
+
+anomaly_pct: 0.4
+temp_excess: 0.3
+critical_alerts: 0.3
+
+The three risk-ranking weights add up to 1.0 (100%).

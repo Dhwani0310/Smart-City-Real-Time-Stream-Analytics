@@ -1,0 +1,8 @@
+# Python dependencies for the Kafka and Spark streaming project
+pandas==2.3.3
+numpy==2.4.6
+pyarrow==25.0.0
+kafka-python==3.0.13
+
+# Apache Spark 4.0.3 is installed separately.
+# Do not install PySpark through pip for this project setup.
